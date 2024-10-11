@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Liste</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Kategorien</h2>
+            <ul>
+                <li onclick="filterTasks('alle')">Alle Aufgaben</li>
+                <li onclick="filterTasks('hoch')">Wichtig</li>
+                <li onclick="filterTasks('mittel')">Mittel</li>
+                <li onclick="filterTasks('niedrig')">Niedrig</li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <header class="header">
+                <h1>Meine Aufgaben</h1>
+                <button class="add-task-btn" onclick="addTask()">+ Aufgabe hinzufügen</button>
+            </header>
+            
+            <div class="task-list" id="task-list">
+                <!-- Aufgaben werden hier dynamisch eingefügt -->
+            </div>
+            
+            <footer class="progress">
+                <span id="progress-text">Fortschritt: 0 von 0 Aufgaben erledigt</span>
+                <progress id="progress-bar" value="0" max="0"></progress>
+            </footer>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
